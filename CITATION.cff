@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "PG-POD-TCN: Physics-guided reduced-order surrogate modeling for CFD-DEM"
+type: software
+version: 0.1.0
+date-released: 2026-08-18
+authors:
+  - name: "PG-POD-TCN Contributors"
+license: MIT
+repository-code: "https://github.com/your-account/pg-pod-tcn"
+

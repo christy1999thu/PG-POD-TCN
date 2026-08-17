@@ -1,0 +1,48 @@
+project:
+  name: pg-pod-tcn-real-data
+  seed: 42
+
+data:
+  root: data/real_cases
+  history: 20
+  horizon: 10
+  stride: 1
+  train_fraction: 0.60
+  val_fraction: 0.20
+  split_seed: 42
+  pod_energy: 0.99
+  pod_max_modes: 128
+
+model:
+  type: tcn
+  channels: 128
+  levels: 4
+  kernel_size: 3
+  dropout: 0.10
+
+loss:
+  coefficient: 1.0
+  field: 0.5
+  mass: 0.2
+  bounds: 0.1
+  macro: 0.5
+  alpha_max: 0.64
+
+training:
+  device: auto
+  epochs: 300
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  patience: 20
+  gradient_clip: 1.0
+  num_workers: 0
+  seeds: [11, 23, 37, 41, 53]
+
+ood:
+  quantile: 0.99
+  regularization: 0.001
+
+output:
+  root: outputs/real
+
